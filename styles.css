@@ -1,0 +1,212 @@
+
+/* General css */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #242526f4;
+}
+textarea {
+    resize: none;
+    outline: none;
+    /* border: none; */
+    border-radius: 10px;
+    padding:5px ;
+    padding-left: 10px;
+    margin-top: 5px;
+    background-color: white;
+  }
+
+  input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+
+/* nav bar css */
+.nav-bar{
+    background-color: #e4df35;
+    height: 3.85rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 102;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .left-section{
+        font-size: 25px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        flex-shrink: 0;
+    }
+    .right-section{
+        padding-right: 1rem;
+        padding-left: 5rem;
+        flex-shrink: 0;
+        .button {
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 15px;
+            padding: 10px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            width: auto;
+          }
+          
+          .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+          }
+          
+          .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+          }
+          
+          .button:hover span {
+            padding-right: 25px;
+          }
+          
+          .button:hover span:after {
+            opacity: 1;
+            right: 0;
+          }
+    }
+}
+
+/* containers */
+
+.main-container{
+    margin: 10px;
+    margin-top: 65px;
+    padding: 5px;
+    /* border: 2px rgb(162, 158, 158) solid; */
+    border-radius: 10px;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+    row-gap: 30px;
+
+    .sub-container{
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffffbd;
+        width: 300px;
+        height: 160px;
+        border: 2px black solid;
+        flex-shrink: 0;
+        margin: auto;
+        border: 2px rgb(162, 158, 158) solid;
+        border-radius: 10px;
+        padding: 10px;
+
+        .container-top{
+
+            display: flex;
+            flex-direction: row-reverse;
+            margin-bottom: 5px;
+
+
+            .edit-button{
+                background-color: rgb(71, 251, 71);
+                border-radius: 50px;
+                border:none;
+                height: 27px;
+                margin-right: 5px;
+                box-shadow: 2px 3px #757575;
+            }
+            .edit-button:hover {background-color: #3e8e41}
+            .edit-button:active {
+                background-color: #3e8e41;
+                box-shadow: 0 1px #666;
+                transform: translateY(2px);
+              }
+
+            .delete-button{
+                background-color: rgb(234, 40, 40);
+                border-radius: 50px;
+                border:none;
+                height: 27px;
+                margin-right: 5px;
+                box-shadow: 2px 3px #757575;
+            }
+            .delete-button:hover {background-color: #e35923}
+            .delete-button:active {
+                background-color: #3e8e41;
+                box-shadow: 0 1px #666;
+                transform: translateY(2px);
+              }
+
+
+            .save-button{
+                background-color: rgb(55, 57, 196);
+                border-radius: 50px;
+                border:none;
+                height: 27px;
+                margin-right: 5px;
+                box-shadow: 2px 3px #757575;
+            }
+            .save-button:hover {background-color: #0b86a5}
+            .save-button:active {
+                background-color: #3e428e;
+                box-shadow: 0 1px #666;
+                transform: translateY(2px);
+              }
+
+              
+        }
+        .container-buttom{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            /* border: 2px solid black; */
+            align-items: center;
+            justify-content: center;
+            .text-area{
+                width: 90%;height: 92%;
+                
+            }
+        }
+        
+    }
+    .sub-container:hover{
+      background-color: #e4df35;
+      box-shadow: 5px 5px #212121;
+      transform: translateY(2px);
+    }
+}
+
+
+@media (max-width:2000px) {
+  .main-container{
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width:1130px) {
+  .main-container{
+    grid-template-columns: auto auto ;
+  }
+}
+@media (max-width:760px) {
+  .main-container{
+    grid-template-columns: auto ;
+  }
+}
